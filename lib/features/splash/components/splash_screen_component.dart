@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tixzilla/features/home/components/home_screen_component.dart';
-import 'package:tixzilla/features/home/containers/home_screen_container.dart';
+
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/widgets/common/fade_page_transition.dart';
+import 'package:tixzilla/features/home/containers/home_screen_container.dart';
 
 class SplashScreenComponent extends StatefulWidget {
   const SplashScreenComponent({super.key});
