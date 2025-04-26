@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
+import 'package:tixzilla/features/home/core/providers/bottom_nav_bar_provider.dart';
 
-class BottomNavbarComponent extends StatelessWidget {
+class BottomNavbarComponent extends ConsumerWidget {
   const BottomNavbarComponent({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final currentIndex = ref.watch(bottomIndexProvider);
+
     return Container(
       decoration: BoxDecoration(
         color: appcolor.background,
@@ -30,8 +35,9 @@ class BottomNavbarComponent extends StatelessWidget {
           padding: EdgeInsets.all(10),
           gap: 8,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          onTabChange: (value) {
-            
+          selectedIndex: currentIndex,
+          onTabChange: (index) {
+            ref.read(bottomIndexProvider.notifier).update((state) => index); 
           },
           tabs: [
             GButton(
