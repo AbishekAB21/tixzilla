@@ -22,7 +22,7 @@ class BottomNavbarComponent extends ConsumerWidget {
       ),
 
       child: Padding(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         child: GNav(
           backgroundColor: appcolor.background,
           color: appcolor.teritiaryColor,
