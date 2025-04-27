@@ -30,6 +30,7 @@ class BottomNavbarComponent extends ConsumerWidget {
           textStyle: TextStyle(
             color: appcolor.iconColor,
             fontWeight: FontWeight.w600,
+            fontFamily: 'Inter',
           ),
           curve: Curves.easeIn,
           tabBackgroundGradient: LinearGradient(

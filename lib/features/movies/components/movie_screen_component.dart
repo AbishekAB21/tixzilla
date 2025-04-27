@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
 import 'package:tixzilla/utils/themes/themes.dart';
 
 class MovieScreenComponent extends StatelessWidget {
@@ -39,11 +40,7 @@ class MovieScreenComponent extends StatelessWidget {
                 children: [
                   Text(
                     "Spider-man into the spiderverse",
-                    style: TextStyle(
-                      fontFamily: 'BebasNeue',
-                      fontSize: 25,
-                      color: appcolor.iconColor,
-                    ),
+                    style: Fontstyles.bebasNeue25px(context),
                   ),
                   // add a ratings star system
                 ],
