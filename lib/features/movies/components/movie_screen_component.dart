@@ -34,7 +34,6 @@ class MovieScreenComponent extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
-              // Refractor the font style
               // put the text in a container and add overflow
               Column(
                 children: [
