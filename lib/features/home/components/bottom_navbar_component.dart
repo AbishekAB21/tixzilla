@@ -27,38 +27,41 @@ class BottomNavbarComponent extends ConsumerWidget {
           backgroundColor: appcolor.background,
           color: appcolor.teritiaryColor,
           duration: Duration(milliseconds: 300),
+          textStyle: TextStyle(
+            color: appcolor.iconColor,
+            fontWeight: FontWeight.w600,
+          ),
           curve: Curves.easeIn,
-          tabBackgroundGradient: LinearGradient(colors: [
-            appcolor.secondaryGradient1,
-            appcolor.secondaryGradient2
-          ]),
+          tabBackgroundGradient: LinearGradient(
+            colors: [appcolor.secondaryGradient1, appcolor.secondaryGradient2],
+          ),
           padding: EdgeInsets.all(10),
           gap: 8,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           selectedIndex: currentIndex,
           onTabChange: (index) {
-            ref.read(bottomIndexProvider.notifier).update((state) => index); 
+            ref.read(bottomIndexProvider.notifier).update((state) => index);
           },
           tabs: [
             GButton(
               icon: Icons.movie,
               text: "Movies",
-              iconColor: appcolor.teritiaryColor,
+              iconActiveColor: appcolor.iconColor,
             ),
             GButton(
               icon: Icons.search,
               text: "Search",
-              iconColor: appcolor.teritiaryColor,
+              iconActiveColor: appcolor.iconColor,
             ),
             GButton(
               icon: Icons.local_movies_rounded,
               text: "My Bookings",
-              iconColor: appcolor.teritiaryColor,
+              iconActiveColor: appcolor.iconColor,
             ),
             GButton(
               icon: Icons.person_rounded,
+              iconActiveColor: appcolor.iconColor,
               text: "Profile",
-              iconColor: appcolor.teritiaryColor,
             ),
           ],
         ),

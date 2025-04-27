@@ -14,7 +14,6 @@ class MovieScreenComponent extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
               // Scrollable widget (Horizontal with that animation, potruting)
               Material(
                 elevation: 3,
@@ -34,7 +33,21 @@ class MovieScreenComponent extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
-              // Add Movie Name (With a good font)
+              // Refractor the font style
+              // put the text in a container and add overflow
+              Column(
+                children: [
+                  Text(
+                    "Spider-man into the spiderverse",
+                    style: TextStyle(
+                      fontFamily: 'BebasNeue',
+                      fontSize: 25,
+                      color: appcolor.iconColor,
+                    ),
+                  ),
+                  // add a ratings star system
+                ],
+              ),
             ],
           ),
         ),
