@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:tixzilla/features/movie_details/containers/movie_details_container.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
+import 'package:tixzilla/widgets/common/fade_page_transition.dart';
 import 'package:tixzilla/features/movies/widgets/poster_widget.dart';
 import 'package:tixzilla/features/movies/core/providers/movie_screen_provider.dart';
-import 'package:tixzilla/widgets/common/fade_page_transition.dart';
+import 'package:tixzilla/features/movie_details/containers/movie_details_container.dart';
 
 class MovieScreenComponent extends ConsumerWidget {
   const MovieScreenComponent({super.key});

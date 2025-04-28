@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tixzilla/features/search/widgets/search_box.dart';
-import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
+
 import 'package:tixzilla/utils/themes/themes.dart';
+import 'package:tixzilla/features/search/widgets/search_box.dart';
 
 class SearchScreenComponent extends StatelessWidget {
   const SearchScreenComponent({super.key});
