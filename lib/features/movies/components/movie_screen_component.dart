@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:tixzilla/features/movie_details/containers/movie_details_container.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
 import 'package:tixzilla/features/movies/widgets/poster_widget.dart';
 import 'package:tixzilla/features/movies/core/providers/movie_screen_provider.dart';
+import 'package:tixzilla/widgets/common/fade_page_transition.dart';
 
 class MovieScreenComponent extends ConsumerWidget {
   const MovieScreenComponent({super.key});
@@ -74,7 +76,19 @@ class MovieScreenComponent extends ConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           // Scrollable poster widget
-                          PosterWidget(posterPath: movie["poster"] as String),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                CustomFadeTransition(
+                                  route: MovieDetailsContainer(),
+                                ),
+                              );
+                            },
+                            child: PosterWidget(
+                              posterPath: movie["poster"] as String,
+                            ),
+                          ),
                         ],
                       ),
                     );
@@ -96,9 +110,9 @@ class MovieScreenComponent extends ConsumerWidget {
                 unratedColor: appcolor.iconColor,
                 itemSize: 25.0,
                 ignoreGestures: true,
+                itemPadding: EdgeInsets.symmetric(horizontal: 2),
                 itemBuilder:
-                    (context, index) =>
-                        Icon(Icons.star, color: appcolor.secondaryGradient1),
+                    (context, index) => Image.asset("assets/images/star.png"),
                 onRatingUpdate: (value) {},
               ),
               SizedBox(height: 10),

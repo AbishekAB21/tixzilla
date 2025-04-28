@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tixzilla/features/search/widgets/search_box.dart';
+import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
 import 'package:tixzilla/utils/themes/themes.dart';
 
 class SearchScreenComponent extends StatelessWidget {
@@ -6,18 +8,24 @@ class SearchScreenComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: appcolor.background,
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(children: [
-            
-            // Search Textfield
+    return SafeArea(
+      child: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: Scaffold(
+          backgroundColor: appcolor.background,
+          body: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: Column(
+              children: [
+                // Search Textfield
+                SearchBoxWidget(),
 
-            // Search result 
+                // Search result
 
-            // show empty state container when there is no search promt and no results found 
-          ],
+                // show empty state container when there is no search promt and no results found
+              ],
+            ),
+          ),
         ),
       ),
     );

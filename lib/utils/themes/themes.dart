@@ -10,7 +10,8 @@ abstract class Appcolor {
   final Color imdbGradient2;
   final Color textColor;
   final Color background;
-  final Color backgroundGradient;
+  final Color textfieldBackground;
+  final Color hintTextColor;
   final Color successColor;
   final Color errorColor;
   final Color teritiaryColor;
@@ -24,7 +25,8 @@ abstract class Appcolor {
     required this.imdbGradient2,
     required this.textColor,
     required this.background,
-    required this.backgroundGradient,
+    required this.textfieldBackground,
+    required this.hintTextColor,
     required this.successColor,
     required this.errorColor,
     required this.teritiaryColor,
@@ -42,7 +44,8 @@ class AppDefaultColor extends Appcolor {
         imdbGradient2: Color.fromRGBO(244, 192, 5, 1),
         textColor: Colors.white70,
         background: Colors.black,
-        backgroundGradient: Colors.grey.shade900,
+        textfieldBackground: Colors.grey.shade900,
+        hintTextColor: Colors.white24,
         successColor: Colors.green,
         errorColor: Colors.red,
         teritiaryColor: Colors.grey,
