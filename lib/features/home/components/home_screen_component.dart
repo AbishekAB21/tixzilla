@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/features/home/components/bottom_navbar_component.dart';
 import 'package:tixzilla/features/movies/containers/movie_screen_container.dart';
 import 'package:tixzilla/features/search/containers/search_screen_container.dart';
@@ -23,8 +24,27 @@ class HomeScreenComponent extends ConsumerWidget {
       const ProfileScreenContainer(),
     ];
     return Scaffold(
+      backgroundColor: appcolor.background,
       bottomNavigationBar: BottomNavbarComponent(),
-      body: screens[currentIndex],
+      body: AnimatedSwitcher(
+        duration: Duration(milliseconds: 500),
+        switchInCurve: Curves.easeIn,
+        switchOutCurve: Curves.easeOut,
+        transitionBuilder: (child, animation) {
+          final offsetAnimation = Tween<Offset>(
+            begin: Offset(-0.2, 0),
+            end: Offset.zero,
+          ).animate(animation);
+
+          return ClipRect(
+            child: SlideTransition(
+              position: offsetAnimation,
+              child: FadeTransition(opacity: animation, child: child),
+            ),
+          );
+        },
+        child: screens[currentIndex],
+      ),
     );
   }
 }
