@@ -31,16 +31,8 @@ class HomeScreenComponent extends ConsumerWidget {
         switchInCurve: Curves.easeIn,
         switchOutCurve: Curves.easeOut,
         transitionBuilder: (child, animation) {
-          final offsetAnimation = Tween<Offset>(
-            begin: Offset(-0.2, 0),
-            end: Offset.zero,
-          ).animate(animation);
-
           return ClipRect(
-            child: SlideTransition(
-              position: offsetAnimation,
-              child: FadeTransition(opacity: animation, child: child),
-            ),
+            child: FadeTransition(opacity: animation, child: child),
           );
         },
         child: screens[currentIndex],
