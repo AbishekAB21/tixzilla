@@ -27,7 +27,7 @@ class SignInComponent extends StatelessWidget {
             different backgrounds.
              */
             image: DecorationImage(
-              image: AssetImage("assets/images/background.jpeg"),
+              image: AssetImage("assets/images/background2.jpeg"),
               fit: BoxFit.cover,
               opacity: 0.7,
             ),
