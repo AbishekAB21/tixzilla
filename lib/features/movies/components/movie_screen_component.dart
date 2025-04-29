@@ -44,6 +44,12 @@ class MovieScreenComponent extends ConsumerWidget {
         "review": "Sensational!",
         "poster": "assets/images/Oppenheimer.jpeg",
       },
+            {
+        "title": "Tangled",
+        "rating": 4.5,
+        "review": "Enchanting!",
+        "poster": "assets/images/tangled (2010).jpeg",
+      },
     ];
 
     return Scaffold(
