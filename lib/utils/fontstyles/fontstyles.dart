@@ -18,6 +18,32 @@ class Fontstyles {
     );
   }
 
+  static TextStyle inter600w20px(BuildContext context) {
+    return TextStyle(
+      color: appcolor.iconColor,
+      fontWeight: FontWeight.w800,
+      fontSize: 16,
+      fontFamily: 'Inter',
+    );
+  }
+
+  static TextStyle interBold(BuildContext context) {
+    return TextStyle(
+      color: appcolor.iconColor,
+      fontWeight: FontWeight.w800,
+      fontFamily: 'Inter',
+    );
+  }
+
+  static TextStyle inter25px600w(BuildContext context) {
+    return TextStyle(
+      color: appcolor.iconColor,
+      fontWeight: FontWeight.w600,
+      fontSize: 25,
+      fontFamily: 'Inter',
+    );
+  }
+
   static TextStyle inter600wHintStyled(BuildContext context) {
     return TextStyle(
       color: appcolor.hintTextColor,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import 'package:tixzilla/features/splash/containers/splash_screen_container.dart';
 
 void main() {
