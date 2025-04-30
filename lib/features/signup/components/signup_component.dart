@@ -92,7 +92,7 @@ class SignUpComponent extends StatelessWidget {
                       SizedBox(height: 10),
 
                       CustomButton(
-                        text: "Sign In",
+                        text: "Sign Un",
                         onTap: () {
                           // Log In
                         },

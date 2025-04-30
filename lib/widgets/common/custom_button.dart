@@ -17,13 +17,13 @@ class CustomButton extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 15),
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
+          color: appcolor.background.withValues(alpha: 0.56),
           borderRadius: BorderRadius.circular(10),
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [appcolor.secondaryGradient1, appcolor.secondaryGradient2],
           ),
-          backgroundBlendMode: BlendMode.colorDodge,
         ),
         child: Center(
           child: Text(text, style: Fontstyles.inter600w20px(context)),
