@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
 import 'package:tixzilla/widgets/common/custom_button.dart';
+import 'package:tixzilla/widgets/common/fade_page_transition.dart';
 import 'package:tixzilla/widgets/common/signin_signup_textfields.dart';
 import 'package:tixzilla/widgets/common/signin_signup_label_widget.dart';
+import 'package:tixzilla/features/signIn/containers/sign_in_container.dart';
 
 class SignUpComponent extends StatelessWidget {
   const SignUpComponent({super.key});
@@ -92,7 +94,7 @@ class SignUpComponent extends StatelessWidget {
                       SizedBox(height: 10),
 
                       CustomButton(
-                        text: "Sign Un",
+                        text: "Sign Up",
                         onTap: () {
                           // Log In
                         },
@@ -113,7 +115,12 @@ class SignUpComponent extends StatelessWidget {
                             style: Fontstyles.inter600w(context),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                            context,
+                            CustomFadeTransition(route: SignInContainer()),
+                          );
+                            },
                             child: Text(
                               "Sign in",
                               style: TextStyle(
