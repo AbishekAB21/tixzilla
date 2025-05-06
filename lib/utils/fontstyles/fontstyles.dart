@@ -52,4 +52,13 @@ class Fontstyles {
       fontFamily: 'Inter',
     );
   }
+
+    static TextStyle inter600wverySmall(BuildContext context) {
+    return TextStyle(
+      color: appcolor.teritiaryColor,
+      fontWeight: FontWeight.w600,
+      fontSize: 12,
+      fontFamily: 'Inter',
+    );
+  }
 }

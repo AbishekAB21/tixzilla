@@ -22,34 +22,30 @@ class VideoPlayerWidget extends StatelessWidget {
                   ),
                 );
               },
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      // TODO : Change to network once firebase is installed
-                      Image.asset(
-                        thumbnailUrl,
-                        width: double.infinity,
-                        height: 200,
-                        fit: BoxFit.cover,
-                      ),
-                      Container(
-                        width: double.infinity,
-                        height: 200,
-                        color: Colors.black.withValues(alpha: 0.5),
-                      ),
-                      Icon(
-                        Icons.play_circle_fill,
-                        size: 64,
-                        color: appcolor.teritiaryColor,
-                      ),
-                    ],
-                  ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    // TODO : Change to network once firebase is installed
+                    Image.asset(
+                      thumbnailUrl,
+                      width: double.infinity,
+                      height: 200,
+                      fit: BoxFit.cover,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 200,
+                      color: Colors.black.withValues(alpha: 0.5),
+                    ),
+                    Icon(
+                      Icons.play_circle_fill,
+                      size: 64,
+                      color: appcolor.teritiaryColor,
+                    ),
+                  ],
                 ),
-                 // TODO : Add Play pause and seek controls
               ),
             );
   }
