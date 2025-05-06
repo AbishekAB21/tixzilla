@@ -40,7 +40,6 @@ class _FullscreenVideoPlayerState extends ConsumerState<FullscreenVideoPlayer> {
 
   @override
   void dispose() {
-
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
@@ -55,18 +54,25 @@ class _FullscreenVideoPlayerState extends ConsumerState<FullscreenVideoPlayer> {
   Widget build(BuildContext context) {
     final controllerAsync = ref.watch(videoPlayerControllerProvider);
 
-    return Scaffold(
-      backgroundColor: appcolor.background,
-      body: Center(
-        child: controllerAsync.when(
-          data:
-              (controller) => AspectRatio(
-                aspectRatio: controller.value.aspectRatio,
-                child: VideoPlayer(controller),
-              ),
-          loading:
-              () => CircularProgressIndicator(color: appcolor.teritiaryColor),
-          error: (err, _) => Text('Error loading video'),
+    return PopScope(
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) {
+          ref.read(videoPlayerControllerProvider.notifier).disposeController();
+        }
+      },
+      child: Scaffold(
+        backgroundColor: appcolor.background,
+        body: Center(
+          child: controllerAsync.when(
+            data:
+                (controller) => AspectRatio(
+                  aspectRatio: controller.value.aspectRatio,
+                  child: VideoPlayer(controller),
+                ),
+            loading:
+                () => CircularProgressIndicator(color: appcolor.teritiaryColor),
+            error: (err, _) => Text('Error loading video'),
+          ),
         ),
       ),
     );

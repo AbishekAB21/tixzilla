@@ -49,6 +49,7 @@ class VideoPlayerWidget extends StatelessWidget {
                     ],
                   ),
                 ),
+                 // TODO : Add Play pause and seek controls
               ),
             );
   }
