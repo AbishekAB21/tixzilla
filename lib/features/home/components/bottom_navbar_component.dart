@@ -14,6 +14,7 @@ class BottomNavbarComponent extends ConsumerWidget {
     final currentIndex = ref.watch(bottomIndexProvider);
 
     return Container(
+      
       decoration: BoxDecoration(
         color: appcolor.background,
         boxShadow: [

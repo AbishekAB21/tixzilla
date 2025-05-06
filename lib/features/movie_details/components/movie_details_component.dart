@@ -34,6 +34,18 @@ class MovieDetailsComponent extends StatelessWidget {
 
               // IMDB ratings section
               IMDBSection(ratings: "5"),
+
+              SizedBox(height: 10,),
+
+              // Desc
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 350,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: appcolor.textfieldBackground.withValues(alpha: 0.56),
+                ),
+              ),
             ],
           ),
         ),

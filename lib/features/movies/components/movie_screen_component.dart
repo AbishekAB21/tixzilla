@@ -103,7 +103,6 @@ class MovieScreenComponent extends ConsumerWidget {
                     },
                   ),
                 ),
-                SizedBox(height: 30),
                 Text(
                   movies[currentPage]["title"] as String,
                   style: Fontstyles.bebasNeue25px(context),
