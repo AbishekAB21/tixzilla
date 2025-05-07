@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tixzilla/features/movie_details/widgets/cast_section_widget.dart';
+import 'package:tixzilla/features/movie_details/widgets/movie_format_language_widget.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/widgets/common/video_player.dart';
@@ -16,7 +18,11 @@ class MovieDetailsComponent extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: appcolor.background,
         iconTheme: IconThemeData(color: appcolor.iconColor),
-        title: Text("Interstellar", style: Fontstyles.bebasNeue25px(context)),
+        title: Text("Interstellar", style: Fontstyles.inter600w20px(context)),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.share_rounded)),
+        ],
+        centerTitle: false,
       ),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
@@ -35,15 +41,44 @@ class MovieDetailsComponent extends StatelessWidget {
               // IMDB ratings section
               IMDBSection(ratings: "5"),
 
-              SizedBox(height: 10,),
+              SizedBox(height: 10),
 
-              // Desc
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 350,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: appcolor.textfieldBackground.withValues(alpha: 0.56),
+              // Movie details
+              Align(
+                alignment: Alignment.topLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Movie Format and Language section
+                    MovieLanguageAndFormatWidget(
+                      movieFormat: "3D, 4D, IMAX",
+                      movieLanguage: "English, Hindi",
+                    ),
+
+                    SizedBox(height: 10),
+
+                    // Desc
+                    Text(
+                      "About the movie",
+                      style: Fontstyles.inter600w(context),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Interstellar is a science fiction epic that depicts a future Earth on the brink of collapse due to famine and environmental disasters. A group of astronauts, led by former NASA pilot Cooper (Matthew McConaughey), undertakes a daring mission to find a new habitable planet by traveling through a wormhole near Saturn, in search of a new home for humanity. The film explores themes of time, space, love, and the human spirit's resilience in the face of adversity.",
+                      style: Fontstyles.inter600wverySmall(context),
+                      textAlign: TextAlign.justify,
+                    ),
+
+                    SizedBox(height: 10),
+
+                    // Cast
+                    Text("Cast and Crew", style: Fontstyles.inter600w(context)),
+                    SizedBox(height: 10),
+                    CastSectionWidget(
+                      imageUrl: "assets/images/test_cast.jpeg",
+                      name: "Matthew McConaughey",
+                    ),
+                  ],
                 ),
               ),
             ],
