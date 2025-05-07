@@ -52,6 +52,7 @@ class MovieDetailsComponent extends StatelessWidget {
                     // Movie Format and Language section
                     MovieLanguageAndFormatWidget(
                       movieFormat: "3D, 4D, IMAX",
+                      movieGenre: "Sci-fi, Thriller",
                       movieLanguage: "English, Hindi",
                     ),
 

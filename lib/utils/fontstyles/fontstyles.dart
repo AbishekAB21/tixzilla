@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:tixzilla/utils/themes/themes.dart';
 
@@ -7,6 +8,15 @@ class Fontstyles {
       fontFamily: 'BebasNeue',
       fontSize: 25,
       color: appcolor.iconColor,
+    );
+  }
+
+  static TextStyle inter15pxBlack(BuildContext context) {
+    return TextStyle(
+      fontFamily: 'Inter',
+      fontSize: 15,
+      fontWeight: FontWeight.bold,
+      color: appcolor.background,
     );
   }
 
@@ -71,3 +81,5 @@ class Fontstyles {
     );
   }
 }
+
+

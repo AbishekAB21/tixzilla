@@ -34,7 +34,9 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   flutter_riverpod: ^2.6.1
   google_nav_bar: ^5.0.7
+  intl: ^0.20.2
   riverpod: ^2.6.1
+  ticket_widget: ^1.0.2
   video_player: ^2.9.5
 
 dev_dependencies:
