@@ -42,7 +42,7 @@ class SignUpComponent extends StatelessWidget {
             return SizedBox(
               height: MediaQuery.of(context).size.height * 0.5,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 decoration: BoxDecoration(
                   color: appcolor.textfieldBackground,
                   borderRadius: BorderRadius.only(
@@ -117,9 +117,9 @@ class SignUpComponent extends StatelessWidget {
                           TextButton(
                             onPressed: () {
                               Navigator.pushReplacement(
-                            context,
-                            CustomFadeTransition(route: SignInContainer()),
-                          );
+                                context,
+                                CustomFadeTransition(route: SignInContainer()),
+                              );
                             },
                             child: Text(
                               "Sign in",
