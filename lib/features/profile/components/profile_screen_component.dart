@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tixzilla/features/profile/widgets/profile_tiles.dart';
-import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
+
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/widgets/common/custom_button.dart';
+import 'package:tixzilla/features/profile/widgets/profile_tiles.dart';
 
 class ProfileScreenComponent extends StatelessWidget {
   const ProfileScreenComponent({super.key});
