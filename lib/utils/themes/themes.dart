@@ -46,7 +46,7 @@ class AppDefaultColor extends Appcolor {
         background: Colors.black,
         textfieldBackground: Colors.grey.shade900,
         hintTextColor: Colors.white24,
-        successColor: Colors.green,
+        successColor: Colors.green.shade900,
         errorColor: Colors.red,
         teritiaryColor: Colors.grey,
         iconColor: Colors.white,

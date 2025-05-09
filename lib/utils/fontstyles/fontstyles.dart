@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:tixzilla/utils/themes/themes.dart';
 
@@ -80,6 +79,13 @@ class Fontstyles {
       fontFamily: 'Inter',
     );
   }
+
+  static TextStyle inter600wIncrediblySmallBold(BuildContext context) {
+    return TextStyle(
+      color: appcolor.iconColor,
+      fontWeight: FontWeight.w800,
+      fontSize: 10,
+      fontFamily: 'Inter',
+    );
+  }
 }
-
-

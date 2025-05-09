@@ -15,63 +15,87 @@ class ProfileScreenComponent extends StatelessWidget {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10),
-            child: Column(
-              children: [
-                CircleAvatar(
-                  backgroundColor: appcolor.iconColor,
-                  radius: 50,
-                  child: Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(50),
-                      child: Image.asset(
-                        "assets/images/test_cast.jpeg",
-                        fit: BoxFit.cover,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: appcolor.iconColor,
+                    radius: 50,
+                    child: Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(50),
+                        child: Image.asset(
+                          "assets/images/test_cast.jpeg",
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(height: 30),
+                  SizedBox(height: 30),
 
-                ProfileTileWidget(
-                  title: "My Account",
-                  subtitle: "abishekabofficial@gmail.com",
-                  tileIcon: Icon(
-                    Icons.security_rounded,
-                    color: appcolor.iconColor,
+                  ProfileTileWidget(
+                    title: "My Account",
+                    subtitle: "abishekabofficial@gmail.com",
+                    tileIcon: Icon(
+                      Icons.security_rounded,
+                      color: appcolor.iconColor,
+                    ),
                   ),
-                ),
 
-                SizedBox(height: 10.0),
+                  SizedBox(height: 10.0),
 
-                ProfileTileWidget(
-                  title: "My Bookings",
-                  subtitle: "1 Active booking",
-                  tileIcon: Icon(
-                    Icons.movie_rounded,
-                    color: appcolor.iconColor,
+                  ProfileTileWidget(
+                    title: "My Bookings",
+                    subtitle: "1 Active booking",
+                    tileIcon: Icon(
+                      Icons.movie_rounded,
+                      color: appcolor.iconColor,
+                    ),
                   ),
-                ),
 
-                SizedBox(height: 10.0),
+                  SizedBox(height: 30.0),
 
-                ProfileTileWidget(
-                  title: "Help Center",
-                  subtitle: "Need help or have questions?",
-                  tileIcon: Icon(
-                    Icons.headset_mic_rounded,
-                    color: appcolor.iconColor,
+                  ProfileTileWidget(
+                    title: "Help Center",
+                    subtitle: "Need help or have questions?",
+                    tileIcon: Icon(
+                      Icons.headset_mic_rounded,
+                      color: appcolor.iconColor,
+                    ),
                   ),
-                ),
 
-                SizedBox(height: 10.0),
+                  SizedBox(height: 10.0),
 
-                ProfileTileWidget(
-                  title: "About",
-                  subtitle: "What is tixzilla?",
-                  tileIcon: Icon(Icons.help, color: appcolor.iconColor),
-                ),
-              ],
+                  ProfileTileWidget(
+                    title: "About",
+                    subtitle: "What is tixzilla?",
+                    tileIcon: Icon(Icons.help, color: appcolor.iconColor),
+                  ),
+
+                  SizedBox(height: 30.0),
+
+                  ProfileTileWidget(
+                    title: "Offers",
+                    subtitle: "Coupons and discounts",
+                    tileIcon: Icon(
+                      Icons.discount_rounded,
+                      color: appcolor.iconColor,
+                    ),
+                  ),
+
+                  SizedBox(height: 10.0),
+
+                  ProfileTileWidget(
+                    title: "Rewards",
+                    subtitle: "View your rewards and unlock new ones",
+                    tileIcon: Icon(
+                      Icons.card_giftcard,
+                      color: appcolor.iconColor,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
