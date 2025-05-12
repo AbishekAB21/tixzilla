@@ -94,6 +94,28 @@ class ProfileScreenComponent extends StatelessWidget {
                       color: appcolor.iconColor,
                     ),
                   ),
+
+                  SizedBox(height: 30.0),
+
+                  ProfileTileWidget(
+                    title: "Delete account",
+                    subtitle: "Delete your Tixzilla account",
+                    tileIcon: Icon(
+                      Icons.delete_forever,
+                      color: appcolor.iconColor,
+                    ),
+                  ),
+
+                  SizedBox(height: 10.0),
+
+                  ProfileTileWidget(
+                    title: "Pause account",
+                    subtitle: "Pause your Tixzilla account",
+                    tileIcon: Icon(
+                      Icons.pause_circle_filled_rounded,
+                      color: appcolor.iconColor,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -103,7 +125,7 @@ class ProfileScreenComponent extends StatelessWidget {
         bottomNavigationBar: BottomAppBar(
           color: appcolor.background,
           height: 70,
-          child: CustomButton(text: "Delete Account", onTap: () {}),
+          child: CustomButton(text: "Sign out", onTap: () {}),
         ),
       ),
     );

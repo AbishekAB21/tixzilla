@@ -93,13 +93,9 @@ class CustomTicketWidget extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "Interstellar",
-                                    style: Fontstyles.inter15pxBlack(context),
-                                  ),
-                                ],
+                              Text(
+                                "Interstellar",
+                                style: Fontstyles.inter15pxBlack(context),
                               ),
                               SizedBox(height: 5),
                               Row(

@@ -62,9 +62,9 @@ class Fontstyles {
     );
   }
 
-  static TextStyle inter600wverySmall(BuildContext context) {
+  static TextStyle inter600wverySmall(BuildContext context, [bool isWhite = false]) {
     return TextStyle(
-      color: appcolor.teritiaryColor,
+      color: isWhite? appcolor.iconColor : appcolor.teritiaryColor,
       fontWeight: FontWeight.w600,
       fontSize: 12,
       fontFamily: 'Inter',

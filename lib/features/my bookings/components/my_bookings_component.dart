@@ -51,8 +51,6 @@ class MyBookingsComponent extends StatelessWidget {
           ),
         ),
       ),
-
-      // Another section here for previous bookings (This can be a list tile situation Check BMS)
     );
   }
 }

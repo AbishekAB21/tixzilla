@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tixzilla/features/movie_details/widgets/cast_section_widget.dart';
-import 'package:tixzilla/features/movie_details/widgets/movie_format_language_widget.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/widgets/common/video_player.dart';
 import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
 import 'package:tixzilla/widgets/common/custom_button.dart';
 import 'package:tixzilla/features/movie_details/widgets/imdb_section.dart';
+import 'package:tixzilla/features/movie_details/widgets/cast_section_widget.dart';
+import 'package:tixzilla/features/movie_details/widgets/time_selection_widget.dart';
+import 'package:tixzilla/features/movie_details/widgets/movie_format_language_widget.dart';
 
 class MovieDetailsComponent extends StatelessWidget {
   const MovieDetailsComponent({super.key});
@@ -91,7 +92,15 @@ class MovieDetailsComponent extends StatelessWidget {
         child: BottomAppBar(
           color: appcolor.background,
           height: 75,
-          child: CustomButton(text: "Book tickets", onTap: () {}),
+          child: CustomButton(
+            text: "Book tickets",
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) => TimeSelectionWidget(),
+              );
+            },
+          ),
         ),
       ),
     );
