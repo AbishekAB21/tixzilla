@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:tixzilla/features/seat_selection/containers/seat_selection_container.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
 import 'package:tixzilla/widgets/common/custom_button.dart';
 import 'package:tixzilla/features/movie_details/widgets/time_slot_button.dart';
+import 'package:tixzilla/widgets/common/fade_page_transition.dart';
 
 class TimeSelectionWidget extends StatelessWidget {
   const TimeSelectionWidget({super.key});
@@ -73,10 +75,19 @@ class TimeSelectionWidget extends StatelessWidget {
             ],
           ),
 
-          SizedBox(height: 40,),
+          SizedBox(height: 40),
 
           // Button
-          CustomButton(text: "Proceed"),
+          CustomButton(
+            text: "Proceed",
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                CustomFadeTransition(route: SeatSelectionContainer()),
+              );
+            },
+          ),
         ],
       ),
     );
