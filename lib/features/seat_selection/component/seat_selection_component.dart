@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
-import 'package:tixzilla/utils/fontstyles/fontstyles.dart';
-import 'package:tixzilla/features/seat_selection/widget/custom_clipper.dart';
+import 'package:tixzilla/features/seat_selection/widget/screen_design.dart';
 
 class SeatSelectionComponent extends StatelessWidget {
   const SeatSelectionComponent({super.key});
@@ -19,55 +18,31 @@ class SeatSelectionComponent extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
         child: Column(
           children: [
-            // Curved/Bent Screen
-            Center(
-              child: ClipPath(
-                clipper: ScreenCurveClipper(),
-                child: Container(
-                  height: 100,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4),
-                      topRight: Radius.circular(4),
-                    ),
-                    gradient: LinearGradient(
-                      colors: [
-                        appcolor.iconColor..withValues(alpha: 0.9),
-                        appcolor.iconColor.withValues(alpha: 0.7),
-                      ],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.3),
-                        blurRadius: 10,
-                        offset: Offset(0, 5),
-                      ),
-                    ],
-                  ),
-                  child: Center(
-                    child: Text(
-                      "All eyez on me",
-                      style: Fontstyles.inter15pxBlack(context).copyWith(
-                        shadows: [
-                          Shadow(
-                            color: Colors.black26,
-                            blurRadius: 4,
-                            offset: Offset(1, 1),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            // Movie Theatre Screen depiction
+            ScreenDesign(),
+
+            SizedBox(height: 10.0),
+
+            // Seats
+            /*
+            
+            Selected seats : secondaryGradient1 + secondaryGradient1 Gradient
+            Booked seats : textfieldcolor
+            Available seates : iconColor..withValues(alpha: 0.9) + iconColor..withValues(alpha: 0.7) Gradient
+
+             */
+
+            /* 
+
+            CTA Button "Confirm seats" -> Open bottomsheet that shows no of seats, total price and a 
+            slidable button that says "Proceed to Payment" 
+
+            use slide_to_act: ^2.0.2 package 
+
+            */
           ],
         ),
       ),
     );
   }
 }
-

@@ -37,7 +37,7 @@ abstract class Appcolor {
 class AppDefaultColor extends Appcolor {
   AppDefaultColor()
     : super(
-        primaryColor: Colors.black,
+        primaryColor: Colors.black26,
         secondaryGradient1: Color.fromRGBO(178, 43, 46, 1),
         secondaryGradient2: Color.fromRGBO(209, 64, 62, 1),
         imdbGradient1: Color.fromRGBO(198, 153, 4, 1),
