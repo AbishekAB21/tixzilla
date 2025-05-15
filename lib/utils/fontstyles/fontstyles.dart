@@ -10,12 +10,12 @@ class Fontstyles {
     );
   }
 
-  static TextStyle inter15pxBlack(BuildContext context) {
+  static TextStyle inter15pxBlack(BuildContext context, [bool iswhite = false]) {
     return TextStyle(
       fontFamily: 'Inter',
       fontSize: 15,
       fontWeight: FontWeight.bold,
-      color: appcolor.background,
+      color: iswhite? appcolor.iconColor : appcolor.background,
     );
   }
 

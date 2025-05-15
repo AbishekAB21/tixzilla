@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
+import 'package:tixzilla/widgets/common/custom_button.dart';
 import 'package:tixzilla/features/seat_selection/widget/screen_design.dart';
 
 class SeatSelectionComponent extends StatelessWidget {
@@ -15,7 +16,12 @@ class SeatSelectionComponent extends StatelessWidget {
         iconTheme: IconThemeData(color: appcolor.iconColor),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+        padding: const EdgeInsets.only(
+          left: 10.0,
+          right: 10.0,
+          top: 10.0,
+          bottom: 20.0,
+        ),
         child: Column(
           children: [
             // Movie Theatre Screen depiction
@@ -32,6 +38,8 @@ class SeatSelectionComponent extends StatelessWidget {
 
              */
 
+            // CTA Button
+
             /* 
 
             CTA Button "Confirm seats" -> Open bottomsheet that shows no of seats, total price and a 
@@ -39,7 +47,14 @@ class SeatSelectionComponent extends StatelessWidget {
 
             use slide_to_act: ^2.0.2 package 
 
+            Confirm seats should only appear when the user taps/selects a
+            seat and go away when the deselect it  
+
             */
+            Spacer(),
+            CustomButton(text: "Confirm your seat",onTap: () {
+              // Open bottom sheet
+            },),
           ],
         ),
       ),
