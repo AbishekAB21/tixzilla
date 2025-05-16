@@ -149,7 +149,7 @@ class CustomTicketWidget extends StatelessWidget {
                       child: Text(
                         "Cancelation : Available 20 minutes before showtime has passed",
                         textAlign: TextAlign.center,
-                        style: Fontstyles.inter600wIncrediblySmall(context),
+                        style: Fontstyles.inter600wIncrediblySmall(context, true),
                       ),
                     ),
                     SizedBox(height: 20),

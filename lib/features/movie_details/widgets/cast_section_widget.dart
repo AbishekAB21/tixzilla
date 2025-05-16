@@ -35,7 +35,7 @@ class CastSectionWidget extends StatelessWidget {
                   width: 80,
                   child: Text(
                     name,
-                    style: Fontstyles.inter600wIncrediblySmall(context),
+                    style: Fontstyles.inter600wIncrediblySmall(context, true),
                     maxLines: 2,
                     textAlign: TextAlign.center,
                     overflow: TextOverflow.ellipsis,

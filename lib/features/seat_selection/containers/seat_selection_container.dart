@@ -7,6 +7,7 @@ class SeatSelectionContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SeatSelectionComponent();
+    // TODO : Pass the correct movie ID dynamically
+    return SeatSelectionComponent(movieId: "INT123",);
   }
 }

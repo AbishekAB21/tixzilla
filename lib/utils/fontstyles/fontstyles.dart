@@ -71,9 +71,19 @@ class Fontstyles {
     );
   }
 
-  static TextStyle inter600wIncrediblySmall(BuildContext context) {
+    static TextStyle inter600wverySmallWhiteAndBlack(BuildContext context, [bool isWhite = false]) {
     return TextStyle(
-      color: appcolor.teritiaryColor,
+      color: isWhite? appcolor.iconColor : appcolor.background,
+      fontWeight: FontWeight.w600,
+      fontSize: 12,
+      fontFamily: 'Inter',
+    );
+  }
+
+
+  static TextStyle inter600wIncrediblySmall(BuildContext context, isWhite) {
+    return TextStyle(
+      color: isWhite? appcolor.teritiaryColor : appcolor.background,
       fontWeight: FontWeight.w600,
       fontSize: 10,
       fontFamily: 'Inter',
