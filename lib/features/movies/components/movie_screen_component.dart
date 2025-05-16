@@ -58,7 +58,7 @@ class MovieScreenComponent extends ConsumerWidget {
       appBar: AppBar(
         toolbarHeight: 35,
         backgroundColor: appcolor.background,
-        title: Image.asset("assets/images/app_logo.png", height: 35),
+        title: Image.asset("assets/images/tixzilla_logo.png", height: 35),
         centerTitle: true,
       ),
       body: Center(

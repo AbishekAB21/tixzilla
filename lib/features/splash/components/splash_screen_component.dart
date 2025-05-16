@@ -38,7 +38,7 @@ class _SplashScreenComponentState extends State<SplashScreenComponent> {
         ),
 
         child: Center(
-          child: Image.asset("assets/images/app_logo.png", height: 85),
+          child: Image.asset("assets/images/tixzilla_logo.png", height: 155),
         ),
       ),
     );

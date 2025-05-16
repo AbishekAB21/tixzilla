@@ -55,7 +55,7 @@ class SignInComponent extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Image.asset("assets/images/app_logo.png", height: 40),
+                      Image.asset("assets/images/tixzilla_logo.png", height: 60),
                       SizedBox(height: 10),
                       SigninSignUpLabel(
                         align: AlignmentDirectional.topStart,
