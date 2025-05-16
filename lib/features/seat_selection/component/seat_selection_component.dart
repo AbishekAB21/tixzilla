@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:tixzilla/utils/themes/themes.dart';
 import 'package:tixzilla/widgets/common/custom_button.dart';
+import 'package:tixzilla/widgets/common/fade_page_transition.dart';
 import 'package:tixzilla/features/seat_selection/widget/screen_design.dart';
+import 'package:tixzilla/features/payment/containers/payment_screen_container.dart';
 
 class SeatSelectionComponent extends StatelessWidget {
   const SeatSelectionComponent({super.key});
@@ -52,9 +54,19 @@ class SeatSelectionComponent extends StatelessWidget {
 
             */
             Spacer(),
-            CustomButton(text: "Confirm your seat",onTap: () {
-              // Open bottom sheet
-            },),
+            CustomButton(
+              text: "Confirm your seat",
+              onTap: () {
+                // Open bottom sheet
+
+                // TODO : change to bottom sheet then proceed to payment
+
+                Navigator.push(
+                  context,
+                  CustomFadeTransition(route: PaymentScreenContainer()),
+                );
+              },
+            ),
           ],
         ),
       ),
